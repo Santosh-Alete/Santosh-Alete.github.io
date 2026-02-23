@@ -70,7 +70,7 @@ particlesJS('particles-js', {
 // Typing Animation
 const typingText = document.querySelector('.typing-text');
 const titles = [
-    'Cloud FinOps Engineer',
+    'Senior Cloud FinOps Engineer',
     'AWS Cost Optimizer',
     'Automation Specialist',
     'Cloud Architect'
