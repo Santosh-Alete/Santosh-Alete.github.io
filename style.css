@@ -564,8 +564,31 @@ section {
 
 .project-card p {
     color: var(--text-secondary);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.6;
+}
+
+.project-impact {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.project-impact span {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.project-impact i {
+    font-size: 0.9rem;
 }
 
 .project-tech {
@@ -585,7 +608,7 @@ section {
 /* Contact Section */
 .contact-content {
     text-align: center;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -594,6 +617,77 @@ section {
     color: var(--text-secondary);
     margin-bottom: 40px;
     line-height: 1.8;
+}
+
+.contact-form {
+    background: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: var(--bg-primary);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-divider {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.contact-divider::before,
+.contact-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: rgba(100, 255, 218, 0.2);
+}
+
+.contact-divider::before {
+    left: 0;
+}
+
+.contact-divider::after {
+    right: 0;
+}
+
+.contact-divider span {
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    padding: 0 20px;
 }
 
 .contact-social {
@@ -619,6 +713,24 @@ section {
 .social-btn:hover {
     background: rgba(100, 255, 218, 0.1);
     transform: translateY(-3px);
+}
+
+/* GitHub Stats Section */
+.github-stats {
+    background: var(--bg-secondary);
+}
+
+.stats-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stats-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Footer */
@@ -682,6 +794,15 @@ section {
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

@@ -310,6 +310,10 @@
                     </div>
                     <h3>AWS Reserved Instance Analyzer</h3>
                     <p>Automated RI/SP utilization tracking and purchase recommendations with team notifications. Helps optimize Reserved Instance coverage across multiple accounts.</p>
+                    <div class="project-impact">
+                        <span><i class="fas fa-dollar-sign"></i> $400K+ saved</span>
+                        <span><i class="fas fa-chart-bar"></i> 90% RI coverage</span>
+                    </div>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>Boto3</span>
@@ -331,6 +335,10 @@
                     </div>
                     <h3>EC2 Rightsizing Analyzer</h3>
                     <p>Cross-account EC2 analysis with CloudWatch metrics and automated recommendations. Deployed on ECS with Terraform for scalable infrastructure.</p>
+                    <div class="project-impact">
+                        <span><i class="fas fa-dollar-sign"></i> $400K+ saved</span>
+                        <span><i class="fas fa-server"></i> 500+ accounts</span>
+                    </div>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>Terraform</span>
@@ -352,6 +360,10 @@
                     </div>
                     <h3>Cost Anomaly Detector</h3>
                     <p>Daily cost monitoring with statistical anomaly detection and Slack/Email alerts. Identifies unusual spending patterns before they become problems.</p>
+                    <div class="project-impact">
+                        <span><i class="fas fa-bell"></i> Real-time alerts</span>
+                        <span><i class="fas fa-shield-alt"></i> Prevents overruns</span>
+                    </div>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>Docker</span>
@@ -373,6 +385,10 @@
                     </div>
                     <h3>S3 Lifecycle Optimizer</h3>
                     <p>Automated S3 bucket audit with lifecycle policy and Intelligent-Tiering recommendations. Reduces storage costs through smart data management.</p>
+                    <div class="project-impact">
+                        <span><i class="fas fa-dollar-sign"></i> $750K+ saved</span>
+                        <span><i class="fas fa-database"></i> 3000+ buckets</span>
+                    </div>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>Boto3</span>
@@ -394,6 +410,10 @@
                     </div>
                     <h3>Unused Resources Finder</h3>
                     <p>Identifies unattached EBS volumes, idle EIPs, orphaned snapshots, and unused NAT Gateways. Generates detailed cost reports for cleanup.</p>
+                    <div class="project-impact">
+                        <span><i class="fas fa-dollar-sign"></i> $200K+ saved</span>
+                        <span><i class="fas fa-search"></i> Multi-region scan</span>
+                    </div>
                     <div class="project-tech">
                         <span>Python</span>
                         <span>Boto3</span>
@@ -415,6 +435,10 @@
                     </div>
                     <h3>Trusted Advisor Scanner</h3>
                     <p>Lambda-based scanner for deprecated versions and unused resources with SES notifications. Ensures compliance and security best practices.</p>
+                    <div class="project-impact">
+                        <span><i class="fas fa-shield-alt"></i> 60% debt reduction</span>
+                        <span><i class="fas fa-check-circle"></i> Compliance</span>
+                    </div>
                     <div class="project-tech">
                         <span>Lambda</span>
                         <span>Python</span>
@@ -436,9 +460,36 @@
                     I'm always interested in discussing cloud cost optimization, FinOps strategies, 
                     or potential collaboration opportunities. Feel free to reach out!
                 </p>
-                <a href="mailto:cloudeng.santosh@gmail.com" class="btn btn-primary btn-large">
-                    <i class="fas fa-envelope"></i> Say Hello
+                
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+
+                <div class="contact-divider">
+                    <span>OR</span>
+                </div>
+
+                <a href="mailto:cloudeng.santosh@gmail.com" class="btn btn-outline btn-large">
+                    <i class="fas fa-envelope"></i> Email Directly
                 </a>
+                
                 <div class="contact-social">
                     <a href="https://github.com/Santosh-Alete" target="_blank" class="social-btn">
                         <i class="fab fa-github"></i>
@@ -447,6 +498,17 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section id="github-stats" class="github-stats">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">GitHub Activity</h2>
+            <div class="stats-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://github-readme-stats.vercel.app/api?username=Santosh-Alete&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a192f&title_color=64ffda&icon_color=64ffda&text_color=8892b0" alt="GitHub Stats">
+                <img src="https://github-readme-streak-stats.herokuapp.com/?user=Santosh-Alete&theme=tokyonight&hide_border=true&background=0a192f&ring=64ffda&fire=64ffda&currStreakLabel=64ffda" alt="GitHub Streak">
             </div>
         </div>
     </section>
