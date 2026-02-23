@@ -8,58 +8,152 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">Santosh Alete</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="nav-container">
+            <div class="logo">SA</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Cloud FinOps Engineer</h1>
-                <p class="hero-subtitle">Optimizing AWS costs and building automation tools</p>
-                <p class="hero-impact">💰 $1.75M+ in annual cloud savings delivered</p>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="name">Santosh Alete</h1>
+                <h2 class="title">
+                    <span class="typing-text"></span>
+                </h2>
+                <p class="description">
+                    Cloud FinOps Engineer specializing in AWS cost optimization and automation.
+                    Building tools that save millions in cloud spend.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="https://github.com/Santosh-Alete" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-github"></i> GitHub
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Santosh-Alete" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/santosh-r-alete-09260a27b/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:cloudeng.santosh@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
                     </a>
                 </div>
             </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>Cloud FinOps Engineer specializing in AWS cost optimization and automation. I build tools that help organizations reduce cloud waste and improve efficiency across hundreds of AWS accounts.</p>
-                    <p>My expertise includes Reserved Instance optimization, rightsizing analysis, cost anomaly detection, and compliance automation. I'm passionate about turning cloud spend into controlled economics.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h3>$1.75M+</h3>
-                            <p>Annual Savings</p>
+                <div class="about-text" data-aos="fade-right">
+                    <p>I'm a Cloud FinOps Engineer with a passion for optimizing AWS infrastructure and reducing cloud waste. With expertise in cost analysis, automation, and multi-account management, I help organizations turn cloud spend into controlled economics.</p>
+                    <p>My approach combines deep technical knowledge with financial acumen to deliver measurable results. I've successfully managed cost optimization across 500+ AWS accounts, implementing strategies that have saved over $1.75M annually.</p>
+                    <div class="highlight-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">$1.75M+</div>
+                            <div class="stat-label">Annual Savings</div>
                         </div>
-                        <div class="stat">
-                            <h3>500+</h3>
-                            <p>AWS Accounts</p>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">AWS Accounts</div>
                         </div>
-                        <div class="stat">
-                            <h3>90%</h3>
-                            <p>RI Coverage</p>
+                        <div class="stat-item">
+                            <div class="stat-number">90%</div>
+                            <div class="stat-label">RI Coverage</div>
                         </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Tag Compliance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Platforms</h3>
+                    <div class="skill-items">
+                        <span>AWS</span>
+                        <span>EC2</span>
+                        <span>S3</span>
+                        <span>Lambda</span>
+                        <span>ECS</span>
+                        <span>Cost Explorer</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>FinOps</h3>
+                    <div class="skill-items">
+                        <span>Cost Optimization</span>
+                        <span>Reserved Instances</span>
+                        <span>Savings Plans</span>
+                        <span>Rightsizing</span>
+                        <span>Budget Management</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming</h3>
+                    <div class="skill-items">
+                        <span>Python</span>
+                        <span>Boto3</span>
+                        <span>Bash</span>
+                        <span>YAML</span>
+                        <span>JSON</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>DevOps & IaC</h3>
+                    <div class="skill-items">
+                        <span>Terraform</span>
+                        <span>Docker</span>
+                        <span>Git</span>
+                        <span>GitHub Actions</span>
+                        <span>CI/CD</span>
                     </div>
                 </div>
             </div>
@@ -69,134 +163,135 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
             <div class="projects-grid">
                 
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Santosh-Alete/aws-reserved-instance-analyzer" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <h3>AWS Reserved Instance Analyzer</h3>
-                    <p>Automated RI/SP utilization tracking and purchase recommendations with team notifications</p>
-                    <div class="project-tags">
+                    <p>Automated RI/SP utilization tracking and purchase recommendations with team notifications. Helps optimize Reserved Instance coverage across multiple accounts.</p>
+                    <div class="project-tech">
                         <span>Python</span>
                         <span>Boto3</span>
                         <span>YAML</span>
+                        <span>AWS Cost Explorer</span>
                     </div>
-                    <a href="https://github.com/Santosh-Alete/aws-reserved-instance-analyzer" target="_blank" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-server"></i></div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Santosh-Alete/aws-ec2-rightsizing-analyzer" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <h3>EC2 Rightsizing Analyzer</h3>
-                    <p>Cross-account EC2 analysis with CloudWatch metrics and automated recommendations for 100+ accounts</p>
-                    <div class="project-tags">
+                    <p>Cross-account EC2 analysis with CloudWatch metrics and automated recommendations. Deployed on ECS with Terraform for scalable infrastructure.</p>
+                    <div class="project-tech">
                         <span>Python</span>
                         <span>Terraform</span>
                         <span>ECS</span>
+                        <span>CloudWatch</span>
                     </div>
-                    <a href="https://github.com/Santosh-Alete/aws-ec2-rightsizing-analyzer" target="_blank" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-bell"></i></div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Santosh-Alete/cost-anomaly-detector" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <h3>Cost Anomaly Detector</h3>
-                    <p>Daily cost monitoring with statistical anomaly detection and Slack/Email alerts</p>
-                    <div class="project-tags">
+                    <p>Daily cost monitoring with statistical anomaly detection and Slack/Email alerts. Identifies unusual spending patterns before they become problems.</p>
+                    <div class="project-tech">
                         <span>Python</span>
                         <span>Docker</span>
                         <span>AWS SES</span>
+                        <span>Slack API</span>
                     </div>
-                    <a href="https://github.com/Santosh-Alete/cost-anomaly-detector" target="_blank" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-database"></i></div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Santosh-Alete/aws-s3-lifecycle-optimizer" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <h3>S3 Lifecycle Optimizer</h3>
-                    <p>Automated S3 bucket audit with lifecycle policy and Intelligent-Tiering recommendations</p>
-                    <div class="project-tags">
+                    <p>Automated S3 bucket audit with lifecycle policy and Intelligent-Tiering recommendations. Reduces storage costs through smart data management.</p>
+                    <div class="project-tech">
                         <span>Python</span>
                         <span>Boto3</span>
+                        <span>S3</span>
                         <span>CloudWatch</span>
                     </div>
-                    <a href="https://github.com/Santosh-Alete/aws-s3-lifecycle-optimizer" target="_blank" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-search"></i></div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Santosh-Alete/aws-unused-resources-finder" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <h3>Unused Resources Finder</h3>
-                    <p>Identifies unattached EBS, idle EIPs, orphaned snapshots, and unused NAT Gateways</p>
-                    <div class="project-tags">
+                    <p>Identifies unattached EBS volumes, idle EIPs, orphaned snapshots, and unused NAT Gateways. Generates detailed cost reports for cleanup.</p>
+                    <div class="project-tech">
                         <span>Python</span>
                         <span>Boto3</span>
                         <span>CSV Reports</span>
+                        <span>Multi-Region</span>
                     </div>
-                    <a href="https://github.com/Santosh-Alete/aws-unused-resources-finder" target="_blank" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Santosh-Alete/aws-trusted-advisor-scanner" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                     <h3>Trusted Advisor Scanner</h3>
-                    <p>Lambda-based scanner for deprecated versions and unused resources with SES notifications</p>
-                    <div class="project-tags">
+                    <p>Lambda-based scanner for deprecated versions and unused resources with SES notifications. Ensures compliance and security best practices.</p>
+                    <div class="project-tech">
                         <span>Lambda</span>
                         <span>Python</span>
                         <span>EventBridge</span>
+                        <span>SES</span>
                     </div>
-                    <a href="https://github.com/Santosh-Alete/aws-trusted-advisor-scanner" target="_blank" class="project-link">
-                        View Project <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
-                    <ul>
-                        <li>AWS (EC2, S3, Lambda, ECS, Cost Explorer)</li>
-                        <li>AWS Organizations & Multi-Account</li>
-                        <li>CloudWatch & CloudTrail</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
-                    <ul>
-                        <li>Python (Boto3, Pandas)</li>
-                        <li>Bash Scripting</li>
-                        <li>YAML/JSON</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> DevOps & IaC</h3>
-                    <ul>
-                        <li>Terraform</li>
-                        <li>Docker</li>
-                        <li>Git & GitHub Actions</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-dollar-sign"></i> FinOps</h3>
-                    <ul>
-                        <li>Cost Optimization & Analysis</li>
-                        <li>Reserved Instances & Savings Plans</li>
-                        <li>Rightsizing & Resource Optimization</li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
@@ -204,18 +299,23 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Interested in cloud cost optimization? Let's connect!</p>
-            <div class="contact-links">
-                <a href="mailto:cloudeng.santosh@gmail.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i> Email Me
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
+                <p class="contact-text">
+                    I'm always interested in discussing cloud cost optimization, FinOps strategies, 
+                    or potential collaboration opportunities. Feel free to reach out!
+                </p>
+                <a href="mailto:cloudeng.santosh@gmail.com" class="btn btn-primary btn-large">
+                    <i class="fas fa-envelope"></i> Say Hello
                 </a>
-                <a href="https://linkedin.com/in/santosh-r-alete-09260a27b/" target="_blank" class="contact-btn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/Santosh-Alete" target="_blank" class="contact-btn">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
+                <div class="contact-social">
+                    <a href="https://github.com/Santosh-Alete" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/santosh-r-alete-09260a27b/" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -223,10 +323,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Santosh Alete. Built with passion for cloud optimization.</p>
+            <p>Designed & Built by Santosh Alete</p>
+            <p class="footer-year">© 2026</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

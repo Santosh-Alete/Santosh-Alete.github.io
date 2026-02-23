@@ -1,4 +1,109 @@
-// Smooth scrolling for navigation links
+// Particles.js Configuration
+particlesJS('particles-js', {
+    particles: {
+        number: {
+            value: 80,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+        },
+        color: {
+            value: '#64ffda'
+        },
+        shape: {
+            type: 'circle'
+        },
+        opacity: {
+            value: 0.3,
+            random: true
+        },
+        size: {
+            value: 3,
+            random: true
+        },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#64ffda',
+            opacity: 0.2,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+        }
+    },
+    interactivity: {
+        detect_on: 'canvas',
+        events: {
+            onhover: {
+                enable: true,
+                mode: 'grab'
+            },
+            onclick: {
+                enable: true,
+                mode: 'push'
+            },
+            resize: true
+        },
+        modes: {
+            grab: {
+                distance: 140,
+                line_linked: {
+                    opacity: 0.5
+                }
+            },
+            push: {
+                particles_nb: 4
+            }
+        }
+    },
+    retina_detect: true
+});
+
+// Typing Animation
+const typingText = document.querySelector('.typing-text');
+const titles = [
+    'Cloud FinOps Engineer',
+    'AWS Cost Optimizer',
+    'Automation Specialist',
+    'Cloud Architect'
+];
+let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentTitle = titles[titleIndex];
+    
+    if (isDeleting) {
+        typingText.textContent = currentTitle.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingText.textContent = currentTitle.substring(0, charIndex + 1);
+        charIndex++;
+    }
+    
+    if (!isDeleting && charIndex === currentTitle.length) {
+        setTimeout(() => isDeleting = true, 2000);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+    }
+    
+    const typingSpeed = isDeleting ? 50 : 100;
+    setTimeout(type, typingSpeed);
+}
+
+setTimeout(type, 1000);
+
+// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,39 +113,115 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
+            // Close mobile menu if open
+            navMenu.classList.remove('active');
         }
     });
 });
 
-// Navbar background on scroll
+// Navbar Scroll Effect
+const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+    if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+        navbar.classList.remove('scrolled');
     }
 });
 
-// Animate elements on scroll
+// Mobile Menu Toggle
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Scroll Animations (Simple AOS alternative)
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('aos-animate');
         }
     });
 }, observerOptions);
 
-// Observe project cards and skill categories
-document.querySelectorAll('.project-card, .skill-category, .stat').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+document.querySelectorAll('[data-aos]').forEach(el => {
     observer.observe(el);
 });
+
+// Add active state to nav links based on scroll position
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// Cursor effect (optional - adds a custom cursor trail)
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll('.circle');
+
+if (window.innerWidth > 768) {
+    // Create cursor circles
+    for (let i = 0; i < 20; i++) {
+        const circle = document.createElement('div');
+        circle.className = 'circle';
+        circle.style.cssText = `
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(100, 255, 218, 0.3);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        `;
+        document.body.appendChild(circle);
+    }
+
+    const circles = document.querySelectorAll('.circle');
+
+    window.addEventListener('mousemove', (e) => {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+    });
+
+    function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+
+        circles.forEach((circle, index) => {
+            circle.style.left = x - 5 + 'px';
+            circle.style.top = y - 5 + 'px';
+            circle.style.transform = `scale(${(circles.length - index) / circles.length})`;
+
+            const nextCircle = circles[index + 1] || circles[0];
+            x += (nextCircle.offsetLeft - x) * 0.3;
+            y += (nextCircle.offsetTop - y) * 0.3;
+        });
+
+        requestAnimationFrame(animateCircles);
+    }
+
+    animateCircles();
+}
