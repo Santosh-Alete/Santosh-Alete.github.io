@@ -799,11 +799,6 @@ section {
     .form-row {
         grid-template-columns: 1fr;
     }
-
-    .stats-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 /* Animations */
