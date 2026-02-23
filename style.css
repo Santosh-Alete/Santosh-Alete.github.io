@@ -329,6 +329,30 @@ section {
 }
 
 /* Skills Section */
+.skills-certs-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.subsection-title {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.skills-column {
+    width: 100%;
+}
+
+.certs-column {
+    width: 100%;
+    position: sticky;
+    top: 100px;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -372,6 +396,76 @@ section {
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 0.85rem;
+}
+
+/* Compact Certifications */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cert-card-compact {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.cert-card-compact:hover {
+    border-color: var(--accent);
+    transform: translateX(5px);
+}
+
+.cert-icon-compact {
+    font-size: 2rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.cert-info h4 {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.cert-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Core Strengths */
+.strengths-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.strength-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    padding: 12px;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+    transition: var(--transition);
+}
+
+.strength-item:hover {
+    transform: translateX(5px);
+    background: rgba(100, 255, 218, 0.05);
+}
+
+.strength-item i {
+    color: var(--accent);
+    font-size: 1.2rem;
 }
 
 /* Certifications Section */
@@ -575,6 +669,14 @@ section {
 
     .highlight-stats {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-certs-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .certs-column {
+        position: static;
     }
 
     .skills-grid,
