@@ -258,10 +258,7 @@ body {
 
 /* Section Styles */
 section {
-    padding: 100px 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 80px 0;
 }
 
 .section-title {
@@ -335,12 +332,12 @@ section {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 25px;
 }
 
 .skill-card {
     background: var(--bg-secondary);
-    padding: 40px;
+    padding: 30px;
     border-radius: 8px;
     border: 1px solid rgba(100, 255, 218, 0.1);
     transition: var(--transition);
@@ -352,29 +349,29 @@ section {
 }
 
 .skill-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .skill-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--text-primary);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .skill-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 .skill-items span {
     background: rgba(100, 255, 218, 0.1);
     color: var(--accent);
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 4px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /* Certifications Section */

@@ -71,9 +71,9 @@ particlesJS('particles-js', {
 const typingText = document.querySelector('.typing-text');
 const titles = [
     'Senior Cloud FinOps Engineer',
-    'AWS Cost Optimizer',
+    'Cloud Cost Optimizer',
     'Automation Specialist',
-    'Cloud Architect'
+    'Multi-Cloud Architect'
 ];
 let titleIndex = 0;
 let charIndex = 0;
