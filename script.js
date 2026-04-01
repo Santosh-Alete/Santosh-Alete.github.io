@@ -70,10 +70,10 @@ particlesJS('particles-js', {
 // Typing Animation
 const typingText = document.querySelector('.typing-text');
 const titles = [
-    'Senior Cloud FinOps Engineer',
-    'Cloud Cost Optimizer',
-    'Automation Specialist',
-    'Multi-Cloud Architect'
+    'Senior Platform Engineer',
+    'Observability & SRE Engineer',
+    'Cloud Infrastructure Security',
+    'DevOps & Automation Engineer'
 ];
 let titleIndex = 0;
 let charIndex = 0;
@@ -113,7 +113,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth',
                 block: 'start'
             });
-            // Close mobile menu if open
             navMenu.classList.remove('active');
         }
     });
@@ -137,7 +136,7 @@ navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-// Scroll Animations (Simple AOS alternative)
+// Scroll Animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -155,7 +154,7 @@ document.querySelectorAll('[data-aos]').forEach(el => {
     observer.observe(el);
 });
 
-// Add active state to nav links based on scroll position
+// Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -163,7 +162,6 @@ window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (window.scrollY >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
@@ -188,26 +186,17 @@ if (contactForm) {
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
         
-        // Create mailto link
         const mailtoLink = `mailto:cloudeng.santosh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-        
-        // Open email client
         window.location.href = mailtoLink;
-        
-        // Show success message
         alert('Opening your email client...');
-        
-        // Reset form
         contactForm.reset();
     });
 }
 
-// Cursor effect (optional - adds a custom cursor trail)
+// Cursor trail effect
 const coords = { x: 0, y: 0 };
-const circles = document.querySelectorAll('.circle');
 
 if (window.innerWidth > 768) {
-    // Create cursor circles
     for (let i = 0; i < 20; i++) {
         const circle = document.createElement('div');
         circle.className = 'circle';
