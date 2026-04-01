@@ -130,11 +130,12 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 80px 50px 0;
+    padding: 100px 50px 50px;
 }
 
 .hero-content {
     max-width: 1000px;
+    width: 100%;
 }
 
 .greeting {
@@ -719,9 +720,12 @@ section {
 /* Responsive */
 @media (max-width: 768px) {
     .container,
-    .nav-container,
-    .hero {
+    .nav-container {
         padding: 0 25px;
+    }
+
+    .hero {
+        padding: 100px 25px 50px;
     }
 
     .nav-menu {
