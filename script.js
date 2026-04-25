@@ -70,10 +70,10 @@ particlesJS('particles-js', {
 // Typing Animation
 const typingText = document.querySelector('.typing-text');
 const titles = [
-    'Senior Platform Engineer',
-    'Observability & SRE Engineer',
-    'Cloud Infrastructure Security',
-    'DevOps & Automation Engineer'
+    'Cloud Security & Zero Trust',
+    'DevSecOps & Policy-as-Code',
+    'Infrastructure & Automation',
+    'FinOps & Cost Governance'
 ];
 let titleIndex = 0;
 let charIndex = 0;
